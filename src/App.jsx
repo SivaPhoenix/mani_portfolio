@@ -39,18 +39,22 @@ export default function App() {
   };
 
   return (
-    <div className="bg-black text-white min-h-screen">
+    <div className="bg-black min-h-screen overflow-x-hidden">
           <Navigation 
             scrolled={scrolled} 
             isMenuOpen={isMenuOpen} 
             setIsMenuOpen={setIsMenuOpen} 
             scrollToSection={scrollToSection} 
           />
-          <HeroSection />
-          <FilmsSection />
-          <PhotographySection />
-          <ContactSection />
-          <Footer />
+          <main className="relative bg-black">
+            <HeroSection />
+            <div className="bg-black">
+              <FilmsSection />
+              <PhotographySection />
+              <ContactSection />
+              <Footer />
+            </div>
+          </main>
     
           <style jsx>{`
             @keyframes fade-in {
